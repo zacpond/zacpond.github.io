@@ -151,3 +151,11 @@ footer {
 }
 
 nav a:last-child { margin-right: 0; }
+
+/* Publication entry details */
+.venue { color: var(--muted); }
+.authors {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0;
+}
