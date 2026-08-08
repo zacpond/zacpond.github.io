@@ -37,6 +37,14 @@ header {
   padding: 1.4rem 0 1.1rem;
 }
 
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
 .site-title {
   font-size: 1.45rem;
   font-weight: bold;
@@ -44,11 +52,12 @@ header {
   color: var(--text);
 }
 
-nav { margin-top: 0.5rem; }
+nav { margin-top: 0; }
 
 nav a {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.85rem;
+  margin-left: 0;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--muted);
@@ -140,3 +149,5 @@ footer {
   .intro-photo, .intro-photo img { width: 160px; flex-basis: 160px; }
   nav a { margin-right: 1rem; }
 }
+
+nav a:last-child { margin-right: 0; }
