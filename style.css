@@ -1,4 +1,4 @@
-/* Zac Pond — academic site stylesheet */
+/* Zachari Pond — academic site stylesheet */
 
 :root {
   --text: #1a1a1a;
@@ -12,18 +12,25 @@
 
 * { box-sizing: border-box; }
 
-html { font-size: 17px; }
+html { font-size: 16px; }
 
 body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   color: var(--text);
   background: var(--bg);
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+
+/* Content links: visibly underlined */
+main a {
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 50, 98, 0.45);
+  text-underline-offset: 2px;
+}
+main a:hover { text-decoration-color: var(--accent); }
 
 .container {
   max-width: var(--maxw);
@@ -34,7 +41,7 @@ a:hover { text-decoration: underline; }
 /* Header / nav */
 header {
   border-bottom: 1px solid var(--rule);
-  padding: 1.4rem 0 1.1rem;
+  padding: 1rem 0 0.85rem;
 }
 
 header .container {
@@ -46,7 +53,7 @@ header .container {
 }
 
 .site-title {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: bold;
   letter-spacing: 0.01em;
   color: var(--text);
@@ -56,27 +63,28 @@ nav { margin-top: 0; }
 
 nav a {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.85rem;
-  margin-left: 0;
+  font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--muted);
-  margin-right: 1.4rem;
+  margin-right: 1.3rem;
 }
 
+nav a:last-child { margin-right: 0; }
 nav a.active { color: var(--accent); border-bottom: 2px solid var(--accent-2); padding-bottom: 2px; }
 nav a:hover { color: var(--accent); text-decoration: none; }
 
-main { padding: 2.2rem 0 3rem; }
+main { padding: 1.5rem 0 2.5rem; }
 
-h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+h1 { font-size: 1.5rem; margin: 0 0 0.8rem; }
 h2 {
-  font-size: 1.15rem;
-  margin: 2.2rem 0 0.8rem;
-  padding-bottom: 0.3rem;
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.6rem;
+  padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--rule);
 }
-h3 { font-size: 1rem; margin: 1.4rem 0 0.4rem; }
+h2:first-child { margin-top: 0; }
+h3 { font-size: 1rem; margin: 1.1rem 0 0.3rem; }
 
 .muted { color: var(--muted); }
 .small {
@@ -88,74 +96,70 @@ h3 { font-size: 1rem; margin: 1.4rem 0 0.4rem; }
 /* Home page intro layout */
 .intro {
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
-.intro-photo {
-  flex: 0 0 200px;
-}
+.intro-photo { flex: 0 0 190px; }
 
 .intro-photo img {
-  width: 200px;
+  width: 190px;
   border-radius: 4px;
   display: block;
 }
 
 .intro-text { flex: 1 1 20rem; }
 .intro-text p:first-child { margin-top: 0; }
+.intro-text p { margin: 0.7rem 0; }
 
 /* Paper entries */
-.paper { margin-bottom: 1.6rem; }
+.paper { margin-bottom: 1.05rem; }
 .paper-title { font-weight: bold; }
+
+.venue { color: var(--muted); }
+
+.authors {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin: 0.15rem 0 0;
+}
+
+.paper p.muted {
+  line-height: 1.55;
+  margin: 0.2rem 0 0;
+}
+
 .paper-links {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
 }
 .paper-links a { margin-right: 0.9rem; }
 
-.jmp-tag {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background: var(--accent);
-  color: #fff;
-  padding: 0.15rem 0.5rem;
-  border-radius: 3px;
-  vertical-align: middle;
-  margin-left: 0.4rem;
-}
-
+details.abstract { margin-top: 0.1rem; }
 details.abstract summary {
   cursor: pointer;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--accent);
 }
-details.abstract p { margin: 0.5rem 0 0; font-size: 0.95rem; }
+details.abstract p {
+  margin: 0.35rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
 
 /* Footer */
 footer {
   border-top: 1px solid var(--rule);
-  padding: 1.2rem 0 2rem;
+  padding: 1rem 0 1.6rem;
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-  html { font-size: 16px; }
+  html { font-size: 15px; }
   .intro { gap: 1.2rem; }
-  .intro-photo, .intro-photo img { width: 160px; flex-basis: 160px; }
-  nav a { margin-right: 1rem; }
-}
-
-nav a:last-child { margin-right: 0; }
-
-/* Publication entry details */
-.venue { color: var(--muted); }
-.authors {
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin: 0.25rem 0 0;
+  .intro-photo, .intro-photo img { width: 150px; flex-basis: 150px; }
+  nav a { margin-right: 0.9rem; }
 }
