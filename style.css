@@ -1,0 +1,142 @@
+/* Zac Pond — academic site stylesheet */
+
+:root {
+  --text: #1a1a1a;
+  --muted: #555;
+  --accent: #003262;      /* Berkeley blue */
+  --accent-2: #FDB515;    /* California gold, used sparingly */
+  --rule: #e2e2e2;
+  --bg: #ffffff;
+  --maxw: 46rem;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header / nav */
+header {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.4rem 0 1.1rem;
+}
+
+.site-title {
+  font-size: 1.45rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+
+nav { margin-top: 0.5rem; }
+
+nav a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin-right: 1.4rem;
+}
+
+nav a.active { color: var(--accent); border-bottom: 2px solid var(--accent-2); padding-bottom: 2px; }
+nav a:hover { color: var(--accent); text-decoration: none; }
+
+main { padding: 2.2rem 0 3rem; }
+
+h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+h2 {
+  font-size: 1.15rem;
+  margin: 2.2rem 0 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+h3 { font-size: 1rem; margin: 1.4rem 0 0.4rem; }
+
+.muted { color: var(--muted); }
+.small {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Home page intro layout */
+.intro {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.intro-photo {
+  flex: 0 0 200px;
+}
+
+.intro-photo img {
+  width: 200px;
+  border-radius: 4px;
+  display: block;
+}
+
+.intro-text { flex: 1 1 20rem; }
+.intro-text p:first-child { margin-top: 0; }
+
+/* Paper entries */
+.paper { margin-bottom: 1.6rem; }
+.paper-title { font-weight: bold; }
+.paper-links {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+}
+.paper-links a { margin-right: 0.9rem; }
+
+.jmp-tag {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+
+details.abstract summary {
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--accent);
+}
+details.abstract p { margin: 0.5rem 0 0; font-size: 0.95rem; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 1.2rem 0 2rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  .intro { gap: 1.2rem; }
+  .intro-photo, .intro-photo img { width: 160px; flex-basis: 160px; }
+  nav a { margin-right: 1rem; }
+}
