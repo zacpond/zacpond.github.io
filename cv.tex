@@ -1,0 +1,133 @@
+% Zachari A. Pond -- Curriculum Vitae (cv.tex)
+% Style and structure follow the Qin CV: Palatino with old-style figures,
+% small-caps section headings over a rule, centered header, two-column references.
+% Search for \todo to find items that still need confirmation.
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[osf]{mathpazo}                   % Palatino with old-style figures
+\usepackage[top=0.85in,bottom=1in,left=0.95in,right=0.95in]{geometry}
+\usepackage[svgnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{titlesec}
+\usepackage[colorlinks=true,urlcolor=RoyalBlue,linkcolor=RoyalBlue]{hyperref}
+\urlstyle{same}
+
+\pagestyle{plain}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
+\widowpenalty=10000 \clubpenalty=10000
+
+%%% Section headings: small caps, rule beneath
+\titleformat{\section}{\needspace{4\baselineskip}\large\scshape}{}{0pt}{}[\vspace{-0.6em}\rule{\textwidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{1.05em}{0.33em}
+
+%%% Macros
+\newcommand{\todo}[1]{\textcolor{Red}{[#1]}}                      % placeholder; remove before sending
+\newcommand{\Dated}[2]{\par\noindent\makebox[\linewidth]{#1\hfill#2}}
+\newcommand{\Inst}[1]{\par\vspace{0.5em}\noindent\textbf{#1}}
+\newcommand{\Abstract}[1]{\par\begin{adjust}\textbf{Abstract:} #1\end{adjust}}
+\newenvironment{adjust}{\begin{list}{}{\setlength{\leftmargin}{2em}\setlength{\rightmargin}{0pt}\setlength{\topsep}{0pt}\setlength{\parsep}{0pt}\setlength{\partopsep}{0pt}}\item}{\end{list}}
+\newcommand{\Entry}[1]{\par\vspace{0.5em}\noindent #1}
+\newcommand{\RefCol}[4]{\begin{minipage}[t]{0.48\textwidth}\raggedright\textbf{#1}\\ #2\\ #3\\ \href{mailto:#4}{#4}\end{minipage}}
+
+\begin{document}
+
+%%% Header
+\begin{center}
+  {\LARGE\bfseries Zachari A. Pond}\\[1.4em]
+  Ph.D. Candidate, Agricultural and Resource Economics, University of California, Berkeley\\
+  \href{mailto:zac_pond@berkeley.edu}{zac\_pond@berkeley.edu} \textcolor{Gray}{|} \href{https://zacpond.github.io}{zacpond.github.io}
+\end{center}
+
+%%% Education
+\section*{Education}
+\vspace{-0.5em}\Inst{University of California, Berkeley}
+\Dated{Ph.D. in Agricultural \& Resource Economics}{Expected 2027}
+\begin{adjust}\textit{Committee:} James Sallee (chair), Dmitry Taubinsky, Kelsey Jack\end{adjust}
+\Dated{M.S. in Agricultural \& Resource Economics}{2023}
+\Inst{Brigham Young University}
+\Dated{B.A. in Economics and Mathematics, \textit{summa cum laude}}{2021}
+
+%%% Fields
+\section*{Fields}
+Environmental Economics, Behavioral Economics, Public Economics
+
+%%% References
+\section*{References}
+\RefCol{James Sallee}{Dept. of Agricultural \& Resource Economics}{University of California, Berkeley}{sallee@berkeley.edu}\hfill
+\RefCol{Dmitry Taubinsky}{Department of Economics}{University of California, Berkeley}{dmitry.taubinsky@berkeley.edu}
+\par\vspace{0.85em}
+\RefCol{Kelsey Jack}{Haas School of Business}{University of California, Berkeley}{kelseyjack@berkeley.edu}\hfill
+\begin{minipage}[t]{0.48\textwidth}~\end{minipage}
+
+%%% Job Market Paper
+\section*{Job Market Paper}
+``The Welfare Effects of Providing Information about Externalities.'' \todo{Available \href{https://zacpond.github.io/pond_jmp.pdf}{here}.}
+\Abstract{Information provision is frequently used to motivate prosocial behavior, yet its impacts on welfare are rarely measured. I study these impacts by combining a signaling model with a series of randomized experiments on personal carbon emissions. The model generates predictions for how information provision can directly affect consumer welfare by altering the relationship between emissions and inferred altruistic type. I implement three interventions, two that provide participants with private information about their emissions and one that publicly reveals them, and measure their welfare effects with an incentive-compatible willingness to pay elicitation. The private information interventions are positive-sum in consumer welfare, whereas public recognition is negative-sum. Nevertheless, 16 to 25 percent of participants pay to avoid receiving private information. Under public recognition, relatively high emitters incur significant utility losses while relatively low emitters receive no gains. I use these estimates to compare the social efficiency of different forms of information provision on externalities.}
+
+%%% Publications
+\section*{Publications}
+Frandsen, B. and Z. A. Pond. 2025. ``\href{https://doi.org/10.1080/07350015.2024.2356083}{Simultaneous Confidence Intervals for Partially Identified Parameters}.'' \textit{Journal of Business \& Economic Statistics}, 43(1): 232--240.
+
+%%% Working Papers
+\section*{Working Papers}
+``Welfare Effects of Climate Change for Outdoor Recreation,'' with J. Gellman and M. Wibbenmeyer.
+
+%%% Pre-PhD Publications
+\section*{Pre-PhD Publications (Environmental Health)}
+\Entry{Pond, Z. A., P. K. Saha, C. J. Coleman, A. A. Presto, A. L. Robinson, and C. A. Pope III. 2022. ``\href{https://doi.org/10.1016/j.envint.2022.107439}{Mortality Risk and Long-term Exposure to Ultrafine Particles and Primary Fine Particle Components in a National US Cohort}.'' \textit{Environment International}, 167: 107439.}
+\Entry{Coleman, C. J., R. A. Yeager, Z. A. Pond, D. W. Riggs, A. Bhatnagar, and C. A. Pope III. 2022. ``\href{https://doi.org/10.1016/j.scitotenv.2022.153848}{Mortality Risk Associated with Greenness, Air Pollution, and Physical Activity in a Representative US Cohort}.'' \textit{Science of the Total Environment}, 824: 153848.}
+\Entry{Pond, Z. A., C. S. Hernandez, P. J. Adams, S. N. Pandis, G. R. Garcia, A. L. Robinson, J. D. Marshall, R. Burnett, K. Skyllakou, P. Garcia Rivera, E. Karnezi, C. J. Coleman, and C. A. Pope III. 2022. ``\href{https://doi.org/10.1021/acs.est.1c04176}{Cardiopulmonary Mortality and Fine Particulate Air Pollution by Species and Source in a National US Cohort}.'' \textit{Environmental Science \& Technology}, 56(11): 7214--7223.}
+\Entry{Garcia III, G. R., N. C. Coleman, Z. A. Pond, and C. A. Pope III. 2021. ``\href{https://doi.org/10.1002/oby.23114}{Shape of BMI-Mortality Risk Associations: Reverse Causality and Heterogeneity in a Representative Cohort of US Adults}.'' \textit{Obesity}, 29(4): 755--766.}
+\Entry{Pope III, C. A., N. Coleman, Z. A. Pond, and R. T. Burnett. 2020. ``\href{https://doi.org/10.1016/j.envres.2019.108924}{Fine Particulate Air Pollution and Human Mortality: 25+ Years of Cohort Studies}.'' \textit{Environmental Research}, 183: 108924.}
+
+%%% Research Experience
+\section*{Research \& Professional Experience}
+\Dated{Research Intern, Resources for the Future}{2023}
+\Dated{Research Assistant to C. Arden Pope III, Brigham Young University}{2019--2021}
+\Dated{Research Assistant to Brigham Frandsen, Brigham Young University}{2020--2021}
+
+%%% Grants and Awards
+\section*{Grants \& Awards}
+\Dated{Giannini Foundation of Agricultural Economics Mini-Grant (\$35,000)}{2026}
+\Dated{Giannini Foundation of Agricultural Economics Mini-Grant (\$35,000)}{2024}
+\Dated{Xlab Graduate Student Research Funding (\$7,000)}{2024}
+\Dated{Giannini Foundation of Agricultural Economics Mini-Grant (\$35,000)}{2023}
+\Dated{Outstanding Graduate Student Instructor Award, UC Berkeley}{2022}
+
+%%% Teaching Experience
+\section*{Teaching Experience}
+\Dated{Economic Analysis for Business Decisions, UC Berkeley Haas (MBA)}{2026}
+\Dated{Intermediate Microeconomics with Applications to Sustainability, UC Berkeley}{2025, 2026}
+\Dated{Natural Resource Economics, UC Berkeley}{2025}
+\Dated{Environmental Economics, UC Berkeley}{2024}
+\Dated{Psychology and Economics, UC Berkeley}{2023}
+\Dated{Economics of Water Resources, UC Berkeley}{2022, 2023}
+\Dated{International Environmental Economics, UC Berkeley}{2022}
+\Dated{Introduction to Econometrics, Brigham Young University}{2020}
+\Dated{Intermediate Microeconomic Theory, Brigham Young University}{2019}
+
+%%% Conferences and Presentations
+\section*{Conferences \& Presentations}
+\Dated{USDA W5133 Environmental Economics Annual Meeting}{2026}
+\Dated{AERE Summer Conference}{2024}
+\Dated{AERE Sessions at the Western Economic Association International Annual Conference}{2024}
+
+%%% Service
+\section*{Service}
+\Dated{Admissions Committee, UC Berkeley ARE}{2025}
+\Dated{Graduate Assembly Delegate, UC Berkeley}{2023}
+
+%%% Other
+\section*{Referee}
+\textit{Journal of Public Economics}
+
+\vfill
+\begin{center}\small Last updated: October 6, 2026\end{center}
+
+\end{document}
