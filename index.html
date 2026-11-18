@@ -7,14 +7,14 @@
   <meta name="description" content="Zachari Pond is a PhD candidate in Agricultural and Resource Economics at UC Berkeley, on the 2026-27 economics job market.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
   <header>
     <div class="container">
-      <div class="site-title">Zachari Pond</div>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
+      <a class="site-title" href="#top">Zachari Pond</a>
+      <nav aria-label="Sections">
+        <a href="#top" class="active" data-section="home">Home</a>
+        <a href="#research" data-section="research">Research</a>
+        <a href="#teaching" data-section="teaching">Teaching</a>
         <a href="cv.pdf">CV</a>
       </nav>
     </div>
@@ -22,6 +22,7 @@
 
   <main>
     <div class="container">
+      <section id="home">
       <div class="intro">
         <div class="intro-photo">
           <img src="headshot.jpg" alt="Photo of Zachari Pond">
@@ -34,7 +35,7 @@
             Email: <a href="mailto:zac_pond@berkeley.edu">zac_pond@berkeley.edu</a>
           </p>
 
-          <h2>Job Market Paper</h2>
+          <h3>Job Market Paper</h3>
           <div class="paper">
             <span class="paper-title">The Welfare Effects of Providing Information about Externalities</span>
             <details class="abstract">
@@ -47,13 +48,122 @@
           </div>
         </div>
       </div>
+      </section>
 
-      <!-- PLACEHOLDER: references / committee section, commonly listed on JM sites
-      <h2>References</h2>
-      <p class="small">Name (chair), Name, Name</p>
-      -->
+      <section id="research" class="page-section">
+        <h2 class="section-title">Research</h2>
+
+      <h3>Publications</h3>
+
+      <div class="paper">
+        <span class="paper-title"><a href="https://www.tandfonline.com/doi/full/10.1080/07350015.2024.2356083">Simultaneous Confidence Intervals for Partially Identified Parameters</a></span> <span class="venue"><em>Journal of Business and Economic Statistics</em>, 43(1): 232&ndash;240, 2025.</span>
+        <p class="authors">Brigham Frandsen, Zachari A. Pond</p>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>This article extends the Imbens and Manski and Stoye confidence interval for a partially identified scalar parameter to a vector-valued parameter. The proposed method produces uniformly valid simultaneous confidence intervals for each dimension, or, equivalently, a rectangular confidence region that covers points in the identified set with a specified probability. The method applies when asymptotically normal estimates of upper and lower bounds for each dimension are available. The intervals are computationally simple and fast relative to methods based on test inversion or bootstrapped calibration, and do not suffer from the conservativity of projection-based approaches.</p>
+        </details>
+      </div>
+      <h3>Working Papers</h3>
+
+      <div class="paper">
+        <span class="paper-title"><a href="pond_recreation.pdf">The Welfare Effects of Climate Change for Outdoor Recreation</a></span>
+        <p class="authors">with Jacob Gellman and Matthew Wibbenmeyer</p>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>Valuation of non-market climate amenities is a crucial component of climate policy. Due to individuals&rsquo; direct exposure to ambient temperature, one ideal setting to study these values is outdoor recreation. In this paper, we combine millions of administrative campground reservation records with daily temperature data to study shifts in recreation value under climate change. By exploiting the timing of reservation and cancellation decisions, we estimate how individuals respond to both climate and weather. Preferences for realized temperature follow an inverse U-shape, with disutility from extreme cold outweighing disutility from extreme heat, while reservation decisions respond to the likelihood of cold conditions but not to the likelihood of heat. Climate projections in the western United States predict net welfare gains of $1 billion per year by century&rsquo;s end, but with substantial seasonal and regional heterogeneity in either gains or losses. Welfare gains depend on individuals&rsquo; ability to accurately perceive climatic changes. These findings contribute to a growing set of climate damage estimates.</p>
+        </details>
+      </div>
+      <h3>Pre-PhD Publications (Environmental Health)</h3>
+
+      <div class="paper">
+        <span class="paper-title"><a href="https://www.sciencedirect.com/science/article/pii/S016041202200366X">Mortality Risk and Long-term Exposure to Ultrafine Particles and Primary Fine Particle Components in a National US Cohort</a></span> <span class="venue"><em>Environment International</em>, 2022.</span>
+        <p class="authors"><strong>Zachari A. Pond</strong>, Provat K. Saha, Carver J. Coleman, Albert A. Presto, Allen L. Robinson, C. Arden Pope III</p>
+      </div>
+
+      <div class="paper">
+        <span class="paper-title"><a href="https://www.sciencedirect.com/science/article/pii/S0048969722009408">Mortality Risk Associated with Greenness, Air Pollution, and Physical Activity in a Representative US Cohort</a></span> <span class="venue"><em>Science of the Total Environment</em>, 2022.</span>
+        <p class="authors">Carver J. Coleman, Ray A. Yeager, <strong>Zachari A. Pond</strong>, Daniel W. Riggs, Aruni Bhatnagar, C. Arden Pope III</p>
+      </div>
+
+      <div class="paper">
+        <span class="paper-title"><a href="https://pubs.acs.org/doi/full/10.1021/acs.est.1c04176">Cardiopulmonary Mortality and Fine Particulate Air Pollution by Species and Source in a National US Cohort</a></span> <span class="venue"><em>Environmental Science and Technology</em>, 2022.</span>
+        <p class="authors"><strong>Zachari A. Pond</strong>, Cesunica S. Hernandez, Peter J. Adams, Spyros N. Pandis, Gabriel R. Garcia, Allen L. Robinson, Julian D. Marshall, Richard Burnett, Ksakousti Skyllakou, Pablo Garcia Rivera, Eleni Karnezi, Carver J. Coleman, C. Arden Pope III</p>
+      </div>
+
+      <div class="paper">
+        <span class="paper-title"><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/oby.23114">Shape of BMI-Mortality Risk Associations: Reverse Causality and Heterogeneity in a Representative Cohort of US Adults</a></span> <span class="venue"><em>Obesity</em>, 2021.</span>
+        <p class="authors">George R. Garcia III, Nathan C. Coleman, <strong>Zachari A. Pond</strong>, C. Arden Pope III</p>
+      </div>
+
+      <div class="paper">
+        <span class="paper-title"><a href="https://www.sciencedirect.com/science/article/pii/S0013935119307212">Fine Particulate Air Pollution and Human Mortality: 25+ Years of Cohort Studies</a></span> <span class="venue"><em>Environmental Research</em>, 2020.</span>
+        <p class="authors">C. Arden Pope III, Nathan Coleman, <strong>Zachari A. Pond</strong>, Richard T. Burnett</p>
+      </div>
+      </section>
+
+      <section id="teaching" class="page-section">
+        <h2 class="section-title">Teaching</h2>
+
+      <h3>University of California, Berkeley</h3>
+
+      <div class="paper">
+        <span class="paper-title">Graduate Student Instructor</span>
+        <p class="muted">Economic Analysis for Business Decisions. <em>Fall 2026</em><br>
+        Intermediate Microeconomics with Applications to Sustainability. <em>Fall 2025 and Spring 2026</em><br>
+        Natural Resource Economics. <em>Spring 2025</em><br>
+        Environmental Economics. <em>Fall 2024</em><br>
+        Psychology and Economics. <em>Fall 2023</em><br>
+        Economics of Water Resources. <em>Spring 2022 and Spring 2023</em><br>
+        International Environmental Economics. <em>Fall 2022</em></p>
+      </div>
+      <h3>Awards</h3>
+
+      <div class="paper">
+        <p class="muted" style="margin-top:0">Outstanding Graduate Student Instructor, UC Berkeley, 2022</p>
+      </div>
+      <h3>Brigham Young University</h3>
+
+      <div class="paper">
+        <span class="paper-title">Teaching Assistant</span>
+        <p class="muted">Introduction to Econometrics. <em>Spring 2020</em><br>
+        Intermediate Microeconomic Theory. <em>Fall 2019</em></p>
+      </div>
+      </section>
     </div>
   </main>
+
+  <script>
+    // Highlight the nav button for the section currently in view.
+    (function () {
+      var links = document.querySelectorAll('nav a[data-section]');
+      var sections = Array.prototype.map.call(links, function (a) {
+        return document.getElementById(a.getAttribute('data-section'));
+      });
+      var header = document.querySelector('header');
+      function update() {
+        var line = header.offsetHeight + 24;
+        var current = 0;
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].getBoundingClientRect().top <= line) current = i;
+        }
+        // At the very bottom of the page, the last section is the current one.
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+          current = sections.length - 1;
+        }
+        for (var j = 0; j < links.length; j++) {
+          links[j].classList.toggle('active', j === current);
+        }
+      }
+      // Land each section flush under the sticky header, whatever its height.
+      function fit() {
+        document.documentElement.style.scrollPaddingTop = (header.offsetHeight - 1) + 'px';
+        update();
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', fit);
+      fit();
+    })();
+  </script>
 
 </body>
 </html>

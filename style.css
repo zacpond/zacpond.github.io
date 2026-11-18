@@ -12,7 +12,12 @@
 
 * { box-sizing: border-box; }
 
-html { font-size: 16px; }
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;   /* keeps section tops clear of the sticky header */
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
   margin: 0;
@@ -40,6 +45,10 @@ main a:hover { text-decoration-color: var(--accent); }
 
 /* Header / nav */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
   border-bottom: 1px solid var(--rule);
   padding: 1rem 0 0.85rem;
 }
@@ -84,7 +93,36 @@ h2 {
   border-bottom: 1px solid var(--rule);
 }
 h2:first-child { margin-top: 0; }
-h3 { font-size: 1rem; margin: 1.1rem 0 0.3rem; }
+h3 {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.6rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Sections of the single-page layout */
+.page-section {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+.section-title {
+  font-size: 1.5rem;
+  margin: 0 0 1.2rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 0.45rem;
+  background: var(--accent-2);
+}
+.section-title + h3 { margin-top: 0; }
+/* Let the last section scroll all the way up under the header when its button is clicked */
+.page-section:last-of-type { min-height: calc(100vh - 6rem); }
 
 .muted { color: var(--muted); }
 .small {
@@ -163,4 +201,5 @@ footer {
   .intro { gap: 1.2rem; }
   .intro-photo, .intro-photo img { width: 150px; flex-basis: 150px; }
   nav a { margin-right: 0.9rem; }
+  html { scroll-padding-top: 6.5rem; }   /* header wraps to two lines */
 }
