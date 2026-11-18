@@ -12,7 +12,6 @@
     <div class="container">
       <a class="site-title" href="#top">Zachari Pond</a>
       <nav aria-label="Sections">
-        <a href="#top" class="active" data-section="home">Home</a>
         <a href="#research" data-section="research">Research</a>
         <a href="#teaching" data-section="teaching">Teaching</a>
         <a href="cv.pdf">CV</a>
@@ -140,7 +139,7 @@
       var header = document.querySelector('header');
       function update() {
         var line = header.offsetHeight + 24;
-        var current = 0;
+        var current = -1;   // -1: still in the intro, no button highlighted
         for (var i = 0; i < sections.length; i++) {
           if (sections[i].getBoundingClientRect().top <= line) current = i;
         }
